@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style> 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.home-icon {
+  width: 40px;
+  height: 35px;
+  cursor: pointer;
+}
+.home-icon,
+.multiple-choice {
+  position: relative;
+}
+.multiplechoice {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 41px 3px 40px;
+  white-space: nowrap;
+}
+
+.question-frame {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 20px 0 30px;
+}
+.what-film-was {
+  height: 74px;
+  width: 279px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.gameplay1question {
+  border-radius: 20px;
+  background-color: #6e3737;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 11px;
+}
+.a-pyaasa {
+  position: relative;
+  font-size: 24px;
+  font-family: "ITF Devanagari";
+  color: #000;
+  text-align: center;
+}
+
+.gameplay1a,
+.gameplay1b,
+.gameplay1c,
+.gameplay1d {
+  cursor: pointer;
+  border: 0;
+  background-color: rgba(231, 208, 129, 0.83);
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0;
+  margin-bottom: 10px; /* Adjust the spacing between buttons */
+}
+
+/* Adjust the padding for each button to make them more centered */
+.gameplay1a { padding: 6px 99px; }
+.gameplay1b { padding: 6px 64px; }
+.gameplay1c { padding: 6px 73px; }
+.gameplay1d { padding: 6px 95px; }
+
+.gameplay1a:hover,
+.gameplay1b:hover,
+.gameplay1c:hover,
+.gameplay1d:hover {
+  background-color: rgba(207, 184, 105, 0.83);
+}
+
+.motherindia {
+  position: relative;
+  font-size: 24px;
+  font-family: "ITF Devanagari";
+  color: #000;
+  text-align: center;
+}
+
+.madhumati {
+  position: relative;
+  font-size: 24px;
+  font-family: "ITF Devanagari";
+  color: #000;
+  text-align: center;
+}
+
+.bandini {
+  position: relative;
+  font-size: 24px;
+  font-family: "ITF Devanagari";
+  color: #000;
+  text-align: center;
+}
+
+.frame-finish,
+.gameplay {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.gameplay {
+  flex: 1;
+  flex-direction: column;
+  gap: 10px 0;
+}
+.frame-finish {
+  align-self: stretch;
+  flex-direction: row;
+  padding:  17px 0 15px;
+}
+.questionsanswersproperty115 {
+  align-self: stretch;
+  flex-direction: column;
+  align-items: center;
+  gap: 73px 0;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  font-family: "Jockey One";
+}
+.frame-b,
+.frame-c,
+.questionsanswersproperty115 {
+  display: flex;
+  justify-content: flex-start;
+}
+.frame-c {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px 0;
+}
+.frame-b {
+    height: 100%;
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 0 0 20px;
+}
+.finish,
+.gameplay-frame {
+  font-size: 20px;
+  font-family: "ITF Devanagari";
+}
+.gameplay-frame {
+    height: 100%;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 48px 0;
+  text-align: center;
+  color: #000;
+}
+.finish {
+  position: relative;
+  color: #fff;
+  text-align: left;
+}
+.end-text {
+  cursor: pointer;
+  border: 0;
+  padding: 15px 20px 14px 21px;
+  background-color: #992f1e;
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.end-text:hover {
+  background-color: #bf5445;
+}
+.final-frame,
+.gameplay1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 20px 0 39px;
+  box-sizing: border-box;
+}
+.gameplay1 {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(180deg, #e3b936, #c70000);
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./gameplay1.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jockey One:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=ITF Devanagari:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Istok Web:wght@400&display=swap"
+    />
+    <link
+    rel="json"
+    href=""
+    />
+  </head>
+  <body>
+    <div class="gameplay1">
+      <section class="gameplay-frame">
+        <img
+          class="home-icon"
+          loading="lazy"
+          alt=""
+          src="./home-icon.png"
+          id="homeIcon"
+        />
+
+        <div class="frame-b">
+          <div class="frame-c">
+            <div class="question-frame">
+              <div class="multiplechoice">
+                <div class="multiple-choice">multiple choice</div>
+              </div>
+            </div>
+            <footer class="questionsanswersproperty115">
+              <div class="gameplay1question">
+                <div class="what-film-was">
+                  What film was India’s first official Oscar entry?
+                </div>
+              </div>
+              <div class="frame-finish">
+                <div class="gameplay">
+                  <button class="gameplay1a" id="gameplay1A">
+                    <div class="a-pyaasa">Pyaasa</div>
+                  </button>
+                  <button class="gameplay1b" id="gameplay1B">
+                    <div class="motherindia">Mother India</div>
+                  </button>
+                  <button class="gameplay1c" id="gameplay1C">
+                    <div class="madhumati">Madhumati</div>
+                  </button>
+                  <button class="gameplay1d" id="gameplay1D">
+                    <div class="bandini">Bandini</div>
+                  </button>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </section>
+      <div class="final-frame">
+        <button class="end-text" id="endText">
+          <div class="finish">FINISH</div>
+        </button>
+      </div>
+    </div>
+
+    <script>
+      var homeIcon = document.getElementById("homeIcon");
+      if (homeIcon) {
+          homeIcon.addEventListener("click", function (e) {
+              window.location.href = "./homepage.html";
+          });
+      }
+  
+      var gameplay1A = document.getElementById("gameplay1A");
+if (gameplay1A) {
+    gameplay1A.addEventListener("click", function (e) {
+      localStorage.setItem("correctAnswer", "Mother India");
+              window.location.href = "./incorrect.html";
+    });
+}
+
+      var gameplay1B = document.getElementById("gameplay1B");
+      if (gameplay1B) {
+          gameplay1B.addEventListener("click", function (e) {
+            // Add 1 to the score in local storage
+        var score = localStorage.getItem("score");
+        score = score ? parseInt(score) + 1 : 1;
+        localStorage.setItem("score", score);
+        window.location.href = "./correct.html";
+          });
+      }
+  
+      var gameplay1C = document.getElementById("gameplay1C");
+      if (gameplay1C) {
+          gameplay1C.addEventListener("click", function (e) {
+            localStorage.setItem("correctAnswer", "Mother India");
+              window.location.href = "./incorrect.html";
+          });
+      }
+  
+      var gameplay1D = document.getElementById("gameplay1D");
+      if (gameplay1D) {
+          gameplay1D.addEventListener("click", function (e) {
+            localStorage.setItem("correctAnswer", "Mother India");
+              window.location.href = "./incorrect.html";
+          });
+      }
+  
+      var endText = document.getElementById("endText");
+      if (endText) {
+          endText.addEventListener("click", function (e) {
+              window.location.href = "./score-page.html"; // Change the href to index.html
+          });
+      }
+  </script>
+  
