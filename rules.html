@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=ITF Devanagari:wght@500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jockey One:wght@400&display=swap"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        line-height: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        width: 100%;
+        position: relative;
+        background: radial-gradient(50% 50%at 50% 50%, #9f6936, #880e02),
+    radial-gradient(50% 50%at 50% 50%, #df9c2e 43.59%, #6f3737),
+    radial-gradient(50% 50%at 50% 50%, #000, #df2e2e),
+    radial-gradient(50% 50%at 50% 50%, #df2e2e, #d03911);
+        height: 844px;
+        overflow: hidden;
+        text-align: center;
+        font-size: 28px;
+        color: #fff;
+        font-family: 'ITF Devanagari';
+      "
+    >
+
+      <div
+        style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 10px;
+          border: 2px solid #fff2f2;
+          box-sizing: border-box;
+          width: 348px;
+          height: 637px;
+          overflow: hidden;
+        "
+      >
+        <div
+          style="
+            position: absolute;
+            top: 35px;
+            left: 23px;
+            font-weight: 500;
+            display: inline-block;
+            width: 302px;
+            height: 588px;
+          "
+        >
+          <p style="margin: 0">1.</p>
+          <p style="margin: 0">Divide players into desired number of teams</p>
+          <p style="margin: 0">2.</p>
+          <p style="margin: 0">The first team to 25 points is the winner!</p>
+          <p style="margin: 0">
+            <p style="margin: 0">3.</p>
+            The correct answer is highlighted on each card.
+          </p>
+        </div>
+      </div>
+      <div
+        style="
+          position: absolute;
+          top: 68px;
+          left: 50%;
+          transform: translateX(-50%);
+          border-radius: 20px;
+          background-color: #992f1e;
+          border: 1px solid #fff;
+          box-sizing: border-box;
+          width: 234px;
+          height: 44px;
+          overflow: hidden;
+          font-size: 32px;
+          font-family: 'Jockey One';
+        "
+      >
+        <div
+          style="
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            width: 186px;
+            height: 26px;
+          "
+        >
+          HOW TO PLAY
+        </div>
+      </div>
+      <img
+        style="
+          position: absolute;
+          top: 33px;
+          left: 16px;
+          width: 40px;
+          height: 35px;
+          cursor: pointer;
+        "
+        alt="home-icon"
+        src="./home-icon.png"
+        id="homeIcon"
+      />
+    </div>
+
+    <script>
+      var homeIcon = document.getElementById("homeIcon");
+      if (homeIcon) {
+        homeIcon.addEventListener("click", function (e) {
+          window.location.href = "./homepage.html";
+        });
+      }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./homemain-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jockey One:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=ITF Devanagari:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Istok Web:wght@400&display=swap"
+    />
+  </head>
+
+<style>
+        .bollywood-trivia-box-child {
+  width: 1075px;
+  height: 1284px;
+  position: relative;
+  display: none;
+}
+.big-bollywood-trivia-1-icon {
+  width: 287px;
+  flex: 1;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.how-to-play {
+  margin-bottom: -8px;
+  height: 68px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.frame-set {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+}
+.play-button {
+  border-radius: 15px;
+  background-color: #992f1e;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 53px 0 54px;
+  cursor: pointer;
+  z-index: 1;
+}
+.play {
+  margin-bottom: -8px;
+  height: 68px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.play-wrapper {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+}
+.play-button1 {
+  align-self: stretch;
+  border-radius: 15px;
+  background-color: #992f1e;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px 0 21px;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
+}
+.bollywood-trivia-box,
+.play-button-parent {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 21px 0;
+}
+.bollywood-trivia-box {
+  margin-bottom: -440px;
+  height: 1284px;
+  width: 1075px;
+  background: radial-gradient(50% 50%at 50% 50%, #ca1707, #432000),
+    radial-gradient(50% 50%at 50% 50%, #df9c2e 43.59%, #6f3737),
+    radial-gradient(50% 50%at 50% 50%, #000, #6f3737),
+    radial-gradient(50% 50%at 50% 50%, #6f3737, #d03911);
+  align-items: center;
+  padding: 174px 20px 658px 97px;
+  box-sizing: border-box;
+  gap: 76px 0;
+  text-align: left;
+  font-size: 40px;
+  color: #fff;
+  font-family: "Jockey One";
+}
+.homemain-page {
+  width: 100%;
+  height: 844px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+    </style>
+
+  <body>
+    <div class="homemain-page">
+      <main class="bollywood-trivia-box">
+        <img
+          class="bollywood-trivia-box-child"
+          alt=""
+          src="./public/rectangle-4.svg"
+        />
+
+        <img
+          class="big-bollywood-trivia-1-icon"
+          loading="lazy"
+          alt=""
+          src="./big-bollywood-trivia 2.png"
+        />
+
+        <div class="play-button-parent">
+          <div class="play-button" id="playButtonContainer">
+            <div class="frame-set">
+              <div class="how-to-play">HOW TO PLAY</div>
+            </div>
+          </div>
+          <div class="play-button1" id="playButtonContainer1">
+            <div class="play-wrapper">
+              <div class="play">PLAY</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+        var playButtonContainer = document.getElementById("playButtonContainer");
+        if (playButtonContainer) {
+          playButtonContainer.addEventListener("click", function (e) {
+            window.location.href = "./rules.html";
+          });
+        }
+      
+        var playButtonContainer1 = document.getElementById("playButtonContainer1");
+        if (playButtonContainer1) {
+          playButtonContainer1.addEventListener("click", function (e) {
+             // Generate a random number between 1 and 148
+          var randomNumber = Math.floor(Math.random() * 146) + 1;
+          // Construct the URL for the random gameplay page
+          var randomGameplayURL = "./gameplay" + randomNumber + ".html";
+          // Redirect to the random gameplay page
+         // window.location.href = randomGameplayURL;
+         window.location.href = "./gameplay1.html"
+          });
+          
+        }
+      </script>
+      

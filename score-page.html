@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+  
+    <link rel="stylesheet" href="./index.css" />
+</head>
+<style>
+    .scorepage {
+        width: 100%;
+        height: 844px;
+        position: relative;
+        background: radial-gradient(50% 50%at 50% 50%, #ca1707, #432000),
+            radial-gradient(50% 50%at 50% 50%, #df9c2e 43.59%, #6f3737),
+            radial-gradient(50% 50%at 50% 50%, #000, #6f3737),
+            radial-gradient(50% 50%at 50% 50%, #6f3737, #d03911);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .score {
+        margin: 0;
+        font-weight: 400;
+        font-family: inherit;
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        width: 156px;
+        height: 94px;
+        z-index: 1;
+    }
+
+    .correct-answers-display {
+        color: #fff;
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .play-again,
+    .back-to-home {
+        border-radius: 20px;
+        background-color: #992f1e;
+        color: #fff;
+        padding: 12px 24px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-family: "Istok Web";
+    }
+
+    .play-again:hover,
+    .back-to-home:hover {
+        background-color: #6f3737;
+    }
+</style>
+<body>
+    <div class="scorepage">
+        <div class="score-label-parent">
+            <h1 class="score">Score</h1>
+            <div class="correct-answers-display">
+                Your Score: <span id="scoreValue">0</span>
+            </div>
+            <div class="question-frame1">
+                <div class="play-again" id="playAgainButton">PLAY AGAIN</div>
+                <div class="back-to-home" id="backToHomeButton">BACK TO HOME</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve the score from local storage
+        var score = localStorage.getItem("score") || 0;
+        
+       
+        // Display the score on the page
+        document.getElementById("scoreValue").textContent = score;
+
+        // Attach event listeners to buttons
+        var playAgainButton = document.getElementById("playAgainButton");
+        var backToHomeButton = document.getElementById("backToHomeButton");
+    
+        playAgainButton.addEventListener("click", function() {
+            localStorage.setItem("score", 0);
+            window.location.href = "./gameplay1.html";
+        });
+    
+        backToHomeButton.addEventListener("click", function() {
+            localStorage.setItem("score", 0);
+            window.location.href = "./homepage.html";
+        });
+    </script>
+</body>
+</html>
