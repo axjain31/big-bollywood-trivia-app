@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-  
     <link rel="stylesheet" href="./index.css" />
 </head>
 <style>
@@ -11,7 +10,8 @@
         width: 100%;
         height: 844px;
         position: relative;
-        background: radial-gradient(50% 50%at 50% 50%, #ca1707, #432000),
+        background: 
+            radial-gradient(50% 50%at 50% 50%, #ca1707, #432000),
             radial-gradient(50% 50%at 50% 50%, #df9c2e 43.59%, #6f3737),
             radial-gradient(50% 50%at 50% 50%, #000, #6f3737),
             radial-gradient(50% 50%at 50% 50%, #6f3737, #d03911);
@@ -54,10 +54,71 @@
     .back-to-home:hover {
         background-color: #6f3737;
     }
+
+    .bollywood-trivia-box,
+    .play-button-parent {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 21px 0;
+    }
+
+    .bollywood-trivia-box {
+        margin-bottom: -440px;
+        height: 1284px;
+        width: 1075px;
+        background: 
+            radial-gradient(50% 50%at 50% 50%, #ca1707, #432000),
+            radial-gradient(50% 50%at 50% 50%, #df9c2e 43.59%, #6f3737),
+            radial-gradient(50% 50%at 50% 50%, #000, #6f3737),
+            radial-gradient(50% 50%at 50% 50%, #6f3737, #d03911);
+        align-items: center;
+        padding: 174px 20px 658px 97px;
+        box-sizing: border-box;
+        gap: 76px 0;
+        text-align: left;
+        font-size: 40px;
+        color: #fff;
+        font-family: "Jockey One";
+    }
+
+    .homemain-page {
+        width: 100%;
+        height: 844px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+    }
+
+.bbt-image{
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding-bottom: 20%;
+}
+
 </style>
 <body>
-    <div class="scorepage">
+    <div class="homemain-page">
+        <div class="scorepage">
+        <img
+          class="bollywood-trivia-box-child"
+          alt=""
+          src="./public/rectangle-4.svg"
+        />
+        
+        <div class="bbt-image">
+            <img
+        class="big-bollywood-trivia-1-icon"
+        loading="lazy"
+        alt=""
+        src="./big-bollywood-trivia 2.png"
+
+      />
         <div class="score-label-parent">
+        </div>
             <h1 class="score">Score</h1>
             <div class="correct-answers-display">
                 Your Score: <span id="scoreValue">0</span>
@@ -68,6 +129,7 @@
             </div>
         </div>
     </div>
+
 
     <script>
         // Retrieve the score from local storage
